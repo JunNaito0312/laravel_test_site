@@ -20,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'status',
         'password',
     ];
 
@@ -42,4 +43,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    const PENALTY_STATUS_NORMAL = 0;
+    const PENALTY_STATUS_WARN = 1;
+    const PENALTY_STATUS_BAN = 2;
+
+
+
+
+    
 }
